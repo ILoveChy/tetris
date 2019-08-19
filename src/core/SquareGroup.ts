@@ -8,25 +8,30 @@ export class SquareGroup {
     public get squares() {
         return this._squares;
     }
-    
-    public get centerPoint() : Point {
+
+    public get centerPoint(): Point {
         return this._centerPoint;
     }
-        
-    public set centerPoint(v : Point) {
+
+    public set centerPoint(v: Point) {
         this._centerPoint = v;
         //同时设置其他所有小方块对象的坐标
-        this._shape.forEach((p,i) => {
+        this.setSquarePoints();
+    }
+    public get shape() {
+        return this._shape;
+    }
+    /**
+     * 根据中心点的坐标以及形状,设置每一个小方块的坐标
+     */
+    private setSquarePoints() {
+        this._shape.forEach((p, i) => {
             this._squares[i].point = {
                 x: this._centerPoint.x + p.x,
                 y: this._centerPoint.y + p.y
             }
         })
     }
-    public get shape() {
-        return this._shape;
-    }
-
     constructor(
         private _shape: Shape,
         private _centerPoint: Point,
@@ -37,12 +42,42 @@ export class SquareGroup {
         this._shape.forEach(p => {
             const sq = new Square();
             sq.color = this._color;
-            sq.point = {
-                x: this._centerPoint.x + p.x,
-                y: this._centerPoint.y + p.y
-            }
             arr.push(sq);
         })
         this._squares = arr;
+        this.setSquarePoints();
+    }
+    /** 
+     * 旋转方向是否为顺时针
+     */
+    protected isClock = true;
+
+    /**
+     * 旋转之后的新形状
+     */
+    afterRotateShape(): Shape {
+        //this._shape
+        if (this.isClock) {
+            return this._shape.map(p => {
+                const newP: Point = {
+                    x: -p.y,
+                    y: p.x
+                }
+                return newP;
+            })
+        } else {
+            return this._shape.map(p => {
+                const newP: Point = {
+                    x: p.y,
+                    y: -p.x
+                }
+                return newP;
+            })
+        }
+    }
+    rotate() {
+        const newShape = this.afterRotateShape();
+        this._shape = newShape;
+        this.setSquarePoints();
     }
 }
