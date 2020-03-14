@@ -15,7 +15,7 @@
   "license": "MIT",
   "description": "俄罗斯方块",
   "dependencies": {
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "ajv": "^6.12.0",
     "ajv-errors": "^1.0.1",
     "ajv-keywords": "^3.4.1",
