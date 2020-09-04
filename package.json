@@ -323,7 +323,7 @@
     "y18n": "^4.0.0",
     "yallist": "^4.0.0",
     "yargs": "^15.1.0",
-    "yargs-parser": "^17.0.0"
+    "yargs-parser": "^18.1.2"
   },
   "scripts": {
     "build": "webpack --mode=production",
