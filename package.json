@@ -125,7 +125,7 @@
     "get-stream": "^5.1.0",
     "get-value": "^3.0.1",
     "glob": "^7.1.6",
-    "glob-parent": "^5.1.0",
+    "glob-parent": "^5.1.2",
     "global-modules": "^2.0.0",
     "global-prefix": "^3.0.0",
     "graceful-fs": "^4.2.3",
