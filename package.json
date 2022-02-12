@@ -16,7 +16,7 @@
   "description": "俄罗斯方块",
   "dependencies": {
     "acorn": "^7.1.0",
-    "ajv": "^6.12.0",
+    "ajv": "^6.12.3",
     "ajv-errors": "^1.0.1",
     "ajv-keywords": "^3.4.1",
     "ansi-regex": "^5.0.0",
