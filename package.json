@@ -171,7 +171,7 @@
     "kind-of": "^6.0.3",
     "lcid": "^3.1.1",
     "loader-runner": "^3.1.0",
-    "loader-utils": "^1.4.0",
+    "loader-utils": "^1.4.1",
     "locate-path": "^5.0.0",
     "lru-cache": "^5.1.1",
     "make-dir": "^3.0.2",
