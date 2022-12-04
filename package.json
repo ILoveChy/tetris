@@ -84,7 +84,7 @@
     "date-now": "^1.0.1",
     "debug": "^4.1.1",
     "decamelize": "^4.0.0",
-    "decode-uri-component": "^0.2.0",
+    "decode-uri-component": "^0.2.1",
     "define-property": "^2.0.2",
     "des.js": "^1.0.1",
     "detect-file": "^1.0.0",
